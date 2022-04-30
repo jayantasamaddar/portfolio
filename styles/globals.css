@@ -1,4 +1,47 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  :root,
+  div#__next {
+    @apply h-full w-full m-0 p-0;
+  }
+  h1 {
+    @apply text-3xl font-bold text-gray-800;
+  }
+  h2 {
+    @apply text-2xl font-bold text-gray-800;
+  }
+  h3 {
+    @apply text-xl text-gray-800;
+  }
+}
+
+@layer components {
+  .color--bg-primary {
+    background: rgb(195, 55, 100);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(195, 55, 100, 1) 0%,
+      rgba(29, 38, 113, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(195, 55, 100, 1) 0%,
+      rgba(29, 38, 113, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(195, 55, 100, 1) 0%,
+      rgba(29, 38, 113, 1) 100%
+    );
+  }
+}
+
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -13,4 +56,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
+} */
