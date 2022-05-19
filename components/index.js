@@ -7,6 +7,7 @@ export { default as NavBar } from './navigation/NavBar';
 export { default as NavItem } from './navigation/NavItem';
 export { default as BurgerMenu } from './navigation/BurgerMenu';
 export { default as Card } from './Card';
+export { default as BlogCard } from './BlogCard';
 export { default as HeroImage } from './HeroImage';
 export { default as SocialIcons } from './SocialIcons';
 export { default as Skillset } from './Skillset';

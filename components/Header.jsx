@@ -8,7 +8,7 @@ const Header = () => {
   const { windowWidth } = useResizeTracker(768);
   const burgerMenuRef = useRef();
 
-  const toggleMenu = useCallback(() => setShowMenu((prev) => !prev), []);
+  const toggleMenu = useCallback(() => setShowMenu(prev => !prev), []);
 
   // console.log(burgerMenuRef.current);
 
@@ -62,6 +62,7 @@ const Header = () => {
               <NavItem name="Home" to="/" />
               <NavItem name="About Me" to="/about" />
               <NavItem name="Projects" />
+              <NavItem name="Blog" />
               <NavItem name="Contact" />
             </NavBar>
           </div>
@@ -74,6 +75,7 @@ const Header = () => {
             <NavItem name="Home" to="/" />
             <NavItem name="About Me" to="/about" />
             <NavItem name="Projects" />
+            <NavItem name="Blog" />
             <NavItem name="Contact" />
           </NavBar>
         </div>

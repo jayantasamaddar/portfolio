@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, Button } from '../components';
 import ProjectImg1 from '../assets/wfdesignbuild.png';
 import ProjectImg2 from '../assets/awg2020.png';
