@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import { getClient } from '../lib/sanity.server';
+import { getClient } from '../../lib/sanity.server';
 import groq from 'groq';
-import { Meta, NavBar, NavItem, BlogCard } from '../components';
-import BlogImage1 from '../assets/wfdesignbuild.png';
-import { BlogLayout1, BlogLayout2 } from '../layouts';
+import { Meta, NavBar, NavItem, BlogCard } from '../../components';
+import { BlogLayout1, BlogLayout2 } from '../../layouts';
 
 const Blog = ({ posts }) => {
   return (
