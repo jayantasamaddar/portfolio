@@ -49,13 +49,15 @@ const PostComponents = {
 };
 
 const Post = ({ post }) => {
-  const { title, categories, body, author, published_at, cover } = post;
+  const { title, categories, body, author, published_at, cover } = post ?? '';
 
   return (
     <>
       <Meta
         title={`${title} | Blog | Jayanta Samaddar`}
-        description={`${author}'s blog article about ${categories.join(', ')}`}
+        description={`${author}'s blog article about ${
+          categories?.join(', ') ?? ''
+        }`}
         keywords="creative director, entrepreneur, full stack developer, web developer, react, nextjs, mongodb, expressjs"
       />
 
@@ -72,11 +74,15 @@ const Post = ({ post }) => {
                   day: 'numeric',
                 })}
               </p>
-              <p className="post__author text-sm md:text-base">{author.name}</p>
+              <p className="post__author text-sm md:text-base">
+                {author?.name ?? ''}
+              </p>
               <p className="post___categories text-sm md:text-base">
                 {categories.map(category => (
                   <>
-                    {category && <span key={category.id}>{category.name}</span>}
+                    {category && (
+                      <span key={category.id}>{category?.name ?? ''}</span>
+                    )}
                   </>
                 ))}
               </p>
@@ -88,7 +94,7 @@ const Post = ({ post }) => {
                   width={1200}
                   height={628}
                   layout="responsive"
-                  alt={cover.alt}
+                  alt={cover?.alt ?? ''}
                 />
               </div>
               <PortableText value={body} components={PostComponents} />
