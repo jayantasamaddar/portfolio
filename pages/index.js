@@ -20,7 +20,7 @@ export default function Home() {
             <h3 className="introduction__byline flex justify-center items-center">
               I design and code beautifully simple things, and I love what I do.
             </h3>
-            <div className="introduction__hero-image flex justify-center items-center py-8 z-[-1]">
+            <div className="introduction__hero-image flex justify-center items-center py-8">
               <Image src={avatar} />
             </div>
           </div>

@@ -1,11 +1,34 @@
 import groq from 'groq';
-import { Meta } from '../../../components';
+import Image from 'next/image';
+import { Meta, Embed } from '../../../components';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '../../../lib/sanity';
 import { getClient } from '../../../lib/sanity.server';
 
 const PostComponents = {
+  list: {
+    // Ex. 1: customizing common list types
+    bullet: ({ children }) => <ul className="py-2 px-4">{children}</ul>,
+    number: ({ children }) => <ol className="py-2 px-4">{children}</ol>,
+
+    // Ex. 2: rendering custom lists
+    checkmarks: ({ children }) => <ol className="py-2">{children}</ol>,
+  },
+  listItem: {
+    // Ex. 1: customizing common list types
+    bullet: ({ children }) => (
+      <li className={`py-1 blog__block_list`}>{children}</li>
+    ),
+    number: ({ children }) => <li className="py-1 list-decimal">{children}</li>,
+    // Ex. 2: rendering custom list items
+    checkmarks: ({ children }) => <li className="py-1">✅ {children}</li>,
+  },
   types: {
+    break: () => (
+      <div className="py-4">
+        <hr className="divider border-slate-300" />
+      </div>
+    ),
     image: ({ value }) => {
       return (
         <img
@@ -13,6 +36,13 @@ const PostComponents = {
           alt={value.alt || ''}
           className="post__image"
         />
+      );
+    },
+    embed: ({ value: { url } }) => {
+      return (
+        <div className="post__embed py-10">
+          <Embed url={url} />
+        </div>
       );
     },
   },
@@ -24,16 +54,17 @@ const Post = ({ post }) => {
   return (
     <>
       <Meta
-        title="Jayanta Samaddar | Blog"
-        description="Jayanta Samaddar's blog featuring Creative Direction, Full Stack Development and Entrepreneurship."
+        title={`${title} | Blog | Jayanta Samaddar`}
+        description={`${author}'s blog article about ${categories.join(', ')}`}
         keywords="creative director, entrepreneur, full stack developer, web developer, react, nextjs, mongodb, expressjs"
       />
 
-      <div className="main-content flex gap-10">
+      <div className="main-content flex flex-col lg:flex-row gap-10">
         {post && (
-          <article className="post flex flex-col basis-3/5 gap-10 p-10">
-            <div className="post__breadcrumbs flex gap-10">
-              <p className="post__published-date">
+          <article className="post flex flex-col basis-8/12 gap-10 p-10">
+            <h1 className="font-bold text-center">{title}</h1>
+            <div className="post__breadcrumbs flex gap-10 justify-center">
+              <p className="post__published-date text-sm md:text-base">
                 {new Date(published_at).toLocaleDateString('en-IN', {
                   weekday: 'short',
                   year: 'numeric',
@@ -41,8 +72,8 @@ const Post = ({ post }) => {
                   day: 'numeric',
                 })}
               </p>
-              <p className="post__author">{author.name}</p>
-              <p className="post___categories">
+              <p className="post__author text-sm md:text-base">{author.name}</p>
+              <p className="post___categories text-sm md:text-base">
                 {categories.map(category => (
                   <>
                     {category && <span key={category.id}>{category.name}</span>}
@@ -51,12 +82,20 @@ const Post = ({ post }) => {
               </p>
             </div>
             <div className="flex flex-col">
-              <h1 className="font-bold">{title}</h1>
+              <div className="post__image">
+                <Image
+                  src={urlFor(cover).url()}
+                  width={1200}
+                  height={628}
+                  layout="responsive"
+                  alt={cover.alt}
+                />
+              </div>
               <PortableText value={body} components={PostComponents} />
             </div>
           </article>
         )}
-        <aside className="post__sidebar flex flex-col basis-2/5 gap-10 p-10"></aside>
+        <aside className="post__sidebar flex flex-col basis-4/12 gap-10 p-10"></aside>
       </div>
     </>
   );
@@ -79,6 +118,7 @@ export async function getStaticProps({ params, preview = false }) {
     props: {
       post,
     },
+    revalidate: 60 * 5,
   };
 }
 
@@ -92,7 +132,7 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 

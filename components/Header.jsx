@@ -47,7 +47,7 @@ const Header = () => {
 
   return (
     /* With Flexbox-Mobile */
-    <header className="header">
+    <header className="header fixed w-full z-50">
       <div className="flex relative flex-wrap justify-between items-center h-[60px] bg-slate-300 px-4">
         <BurgerMenu
           className="burger-menu md:hidden lg:flex-col cursor-pointer p-3"

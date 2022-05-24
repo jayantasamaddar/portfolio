@@ -52,13 +52,13 @@ const BlogLayout1 = ({ data }) => {
           </div>
         </div>
       </section>
-
-      <section className="blog__cards flex p-10">
+      <hr />
+      <section className="blog__cards flex flex-row p-10">
         {data &&
           data.map(({ _id, title, cover, published_at, slug }) => (
             <BlogCard
               key={_id}
-              className="sm:basis-1/2 md:basis-1/3 drop-shadow-lg"
+              className="basis-full drop-shadow-lg"
               image={urlFor(cover).url()}
               title={title}
               published_at={new Date(published_at).toLocaleDateString(

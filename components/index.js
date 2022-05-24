@@ -11,3 +11,5 @@ export { default as BlogCard } from './BlogCard';
 export { default as HeroImage } from './HeroImage';
 export { default as SocialIcons } from './SocialIcons';
 export { default as Skillset } from './Skillset';
+export { default as Loader } from './Loader';
+export { default as Embed } from './Embed';
