@@ -53,13 +53,15 @@ const Post = ({ post }) => {
 
   return (
     <>
-      <Meta
-        title={`${title} | Blog | Jayanta Samaddar`}
-        description={`${author}'s blog article about ${
-          categories?.join(', ') ?? ''
-        }`}
-        keywords="creative director, entrepreneur, full stack developer, web developer, react, nextjs, mongodb, expressjs"
-      />
+      {post && (
+        <Meta
+          title={`${title} | Blog | Jayanta Samaddar`}
+          description={`${author}'s blog article about ${
+            categories?.join(', ') ?? ''
+          }`}
+          keywords="creative director, entrepreneur, full stack developer, web developer, react, nextjs, mongodb, expressjs"
+        />
+      )}
 
       <div className="main-content flex flex-col lg:flex-row gap-10">
         {post && (

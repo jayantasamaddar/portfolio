@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Documentation
 
-## Getting Started
+Visit [Portfolio Website](https://portfolio-jayantasamaddar.vercel.app)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Framework and Tooling
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Core**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. [Nextjs] (https://nextjs.org/docs/getting-started) - React Production Framework with pre-rendering
+2. [Sanity](https://www.sanity.io) | [@sanity/client](https://www.npmjs.com/package/@sanity/client) - Headless CMS
+3. [next-sanity](https://www.npmjs.com/package/next-sanity) - Sanity.io toolkit for Next.js.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Other Packages:**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. [@sanity/image-url](https://www.npmjs.com/package/@sanity/image-url) - Quickly generate image urls from Sanity image records.
+2. [Sharp](https://www.npmjs.com/package/sharp) - High performance Image processing. Using Next.js' built-in Image Optimization requires sharp as a dependency.
+3. [GROQ](https://www.npmjs.com/package/groq) - GROQ (Graph-Relational Object Queries) is a declarative language designed to query collections of largely schema-less JSON documents. Sanity allows GROQ and GraphQL queries. | [Sanity Docs for GROQ](https://www.sanity.io/docs/groq)
+4. [@portabletext/react](https://www.npmjs.com/package/@portabletext/react) - Render [Portable Text](https://github.com/portabletext/portabletext) with React. Portable Text is a JSON based rich text specification for modern content editing platforms like Sanity.
+5. [Super React Gist](https://www.npmjs.com/package/super-react-gist) - Use Github gists with React
+6. [React Icons](https://www.npmjs.com/package/react-icons) - Multi icon library for React
+7. [TailwindCSS](https://tailwindcss.com/docs/guides/nextjs) - Utility-first CSS Framework
+8. [Mapbox GL](https://www.npmjs.com/package/mapbox-gl) - JavaScript library for interactive, customizable vector maps on the web. It takes map styles that conform to the Mapbox Style Specification, applies them to vector tiles that conform to the Mapbox Vector Tile Specification, and renders them using WebGL.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+# Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Deployed on Vercel via auto sync to this Github repo's, main branch.
