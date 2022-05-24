@@ -9,8 +9,8 @@
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
-    "airbnb",
-    "airbnb/hooks",
+    // "airbnb",
+    // "airbnb/hooks",
     "plugin:react/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
