@@ -36,6 +36,13 @@
   li.blog__block_list ul li {
     @apply list-square;
   }
+  input,
+  textarea {
+    @apply border border-slate-300 rounded-sm p-2;
+  }
+  label {
+    @apply text-slate-500;
+  }
 }
 
 @layer components {

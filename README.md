@@ -22,6 +22,7 @@ Visit [Portfolio Website](https://portfolio-jayantasamaddar.vercel.app)
 6. [React Icons](https://www.npmjs.com/package/react-icons) - Multi icon library for React
 7. [TailwindCSS](https://tailwindcss.com/docs/guides/nextjs) - Utility-first CSS Framework
 8. [Mapbox GL](https://www.npmjs.com/package/mapbox-gl) - JavaScript library for interactive, customizable vector maps on the web. It takes map styles that conform to the Mapbox Style Specification, applies them to vector tiles that conform to the Mapbox Vector Tile Specification, and renders them using WebGL.
+9. [React-Hook-Form](https://www.npmjs.com/package/react-hook-form) - Performant, flexible and extensible forms that use React hooks, with easy-to-use validation, integration with UI libraries, third-party validatation libraries like Zod, Yup etc.
 
 ---
 
