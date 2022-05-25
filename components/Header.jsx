@@ -23,7 +23,7 @@ const Header = () => {
   /* Burger Menu Dropdown onClick Handling */
   useEffect(() => {
     const handler = ({ target }) => {
-      console.log(target.closest('.mobile-navbar'));
+      // console.log(target.closest('.mobile-navbar'));
       if (target.closest('.burger-menu')) toggleMenu();
       else if (target.closest('.mobile-navbar') !== burgerMenuRef.current)
         setShowMenu(false);
@@ -81,34 +81,6 @@ const Header = () => {
         </div>
       )}
     </header>
-
-    /* With Flexbox */
-    // <header className="header">
-    //   <div className="flex flex-wrap justify-between items-center h-[50px] bg-slate-300 py-4">
-    //     <div className="logo flex justify-center items-center px-10">Logo</div>
-    //     <div className="navbar col-span-5 px-4">
-    //       <NavBar className="flex justify-end gap-10 h-full items-center">
-    //         <NavItem name="Home" to="/" />
-    //         <NavItem name="About Me" to="/about" />
-    //         <NavItem name="Projects" />
-    //         <NavItem name="Contact" />
-    //       </NavBar>
-    //     </div>
-    //   </div>
-    // </header>
-
-    /* With Grid */
-    // <header className="header grid grid-cols-6 h-[50px] bg-slate-300">
-    //   <div className="logo flex justify-center items-center">Logo</div>
-    //   <div className="navbar col-span-5 px-4">
-    //     <NavBar className="flex justify-end gap-10 h-full items-center">
-    //       <NavItem name="Home" to="/" />
-    //       <NavItem name="About Me" to="/about" />
-    //       <NavItem name="Projects" />
-    //       <NavItem name="Contact" />
-    //     </NavBar>
-    //   </div>
-    // </header>
   );
 };
 

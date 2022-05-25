@@ -38,7 +38,7 @@
   }
   input,
   textarea {
-    @apply border border-slate-300 rounded-sm p-2;
+    @apply border border-slate-300 rounded-sm p-2 focus:outline-none;
   }
   label {
     @apply text-slate-500;
