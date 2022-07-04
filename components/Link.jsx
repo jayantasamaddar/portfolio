@@ -1,17 +1,23 @@
-/* eslint-disable react/display-name */
-// eslint-disable-next-line no-unused-vars
-import { Link as NextLink } from 'next/link';
-import React, { forwardRef } from 'react';
+import Link from 'next/link';
+import React from 'react';
+import { ExternalLink } from '.';
 
-const Link = forwardRef(({ external, ...props }, ref) => {
-  const LinkElement = external ? 'a' : 'NextLink';
+const MasterLink = ({ external, children, ...props }) => {
   const extraProps = {
     rel: `${external ? 'noopener noreferrer' : undefined}`,
     target: `${external ? '_blank' : undefined}`,
     ...props,
   };
 
-  return <LinkElement ref={ref} {...extraProps} />;
-});
+  return external ? (
+    <ExternalLink passHref {...extraProps}>
+      {children}
+    </ExternalLink>
+  ) : (
+    <Link passHref {...extraProps}>
+      {children}
+    </Link>
+  );
+};
 
-export default Link;
+export default MasterLink;

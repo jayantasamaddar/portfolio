@@ -1,4 +1,4 @@
-import { Card, Button } from '../components';
+import { Card, Button, Link } from '../components';
 import Portfolio from '../assets/portfolio.png';
 import UrsaUI from '../assets/ursa-ui.png';
 import Zenius from '../assets/zenius.png';
@@ -30,8 +30,9 @@ const Projects = () => {
       <div className="flex flex-col justify-center items-center gap-6 px-10 lg:px-20">
         <h2>My Projects</h2>
         <p>
-          Here are a few sample projects I've built that showcase my skills.
-          Want to see more? Email me.
+          Here are a few projects I've built that showcase my skills. Want to
+          see more?&nbsp;
+          <Link href="mailto:jayanta@zenius.one">Email me</Link>.
         </p>
       </div>
 

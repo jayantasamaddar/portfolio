@@ -15,10 +15,11 @@ export default function Home() {
         <section className="introduction p-16">
           <div className="introduction__content flex flex-col gap-4">
             <h1 className="introduction__headline flex justify-center items-center">
-              Designer, Creative Director and Developer
+              Creative Director and Frontend/Fullstack Engineer
             </h1>
             <h3 className="introduction__byline flex justify-center items-center">
-              I design and code beautifully simple things, and I love what I do.
+              I take great pleasure in building aesthetically pleasing yet
+              functional products.
             </h3>
             <div className="introduction__hero-image flex justify-center items-center py-8">
               <Image src={avatar} alt="Avatar of Jayanta Samaddar" />
@@ -32,12 +33,17 @@ export default function Home() {
               Hi, I’m Jayanta. Nice to meet you.
             </h2>
             <p className="px-10 md:px-20 lg:px-60">
-              Since beginning my journey as a freelance designer nearly 10 years
-              ago, I've done remote work for agencies, consulted for startups,
-              and collaborated with talented people to create digital products
-              for both business and consumer use. I'm quietly confident,
-              naturally curious, and perpetually working on improving my chops
-              one design problem at a time.
+              I started my journey 6 years ago as the Founder and Creative
+              Director of Kollab - a streetwear brand. The love for building
+              aesthetically pleasing products led me to the digital world. Fast
+              forward to today's date, I am a Frontend and Fullstack Engineer,
+              who has built functional applications that solved real-world
+              problems of a business. I'm currently working on a few independent
+              projects, including a component library, an
+              ecommerce-backend-as-a-service application. I I'm an extremely
+              fast learner and aim at nothing short of mastery, naturally
+              curious, and perpetually building my repertoire one design problem
+              at a time.
             </p>
           </div>
         </section>

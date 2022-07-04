@@ -17,3 +17,4 @@ export { default as Skillset } from './Skillset';
 export { default as Loader } from './Loader';
 export { default as Embed } from './Embed';
 export { default as Link } from './Link';
+export { default as ExternalLink } from './navigation/ExternalLink';

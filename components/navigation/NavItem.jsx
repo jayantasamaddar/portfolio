@@ -1,38 +1,28 @@
 import React from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link } from '../';
 
 const NavItem = ({
   id,
   name,
-  responsive,
   className,
   icon,
   index,
   to,
   unlink,
+  external,
   onClick,
   nested,
 }) => {
-  let listItem = name;
-  if (responsive === true) {
-    listItem =
-      name === 'Login' ? (
-        <i className="fas fa-user-circle fa-2x"></i>
-      ) : name === 'Search' ? (
-        <i className="fas fa-search fa-lg"></i>
-      ) : (
-        listItem
-      );
-  }
   return (
     <>
       {unlink ? (
         <li
           title={name}
-          className={`nav-item cursor-pointer ${className ? className : ''}`}
+          className={`nav-item cursor-pointer ${className || ''}`}
           onClick={onClick}
         >
-          {icon ? icon : listItem}
+          {icon || name}
           {nested}
         </li>
       ) : (
@@ -46,15 +36,16 @@ const NavItem = ({
                   .toLowerCase()}`
           }
           passHref
+          external={external}
         >
           <li
             id={id}
             title={name}
             data-index={index}
-            className={`nav-item cursor-pointer ${className ? className : ''}`}
+            className={`nav-item cursor-pointer ${className || ''}`}
             onClick={onClick}
           >
-            {icon ? icon : listItem}
+            {icon || name}
           </li>
         </Link>
       )}

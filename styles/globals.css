@@ -36,6 +36,9 @@
   li.blog__block_list ul li {
     @apply list-square;
   }
+  p a {
+    @apply text-[#7510F7] font-bold;
+  }
   input,
   textarea {
     @apply border border-slate-300 rounded-sm p-2 focus:outline-none;

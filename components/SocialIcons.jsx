@@ -13,7 +13,7 @@ const socialLinks = [
   {
     name: 'Facebook',
     icon: <FaFacebook />,
-    link: 'https://www.facebook.com/jayantasamaddar',
+    link: 'https://www.facebook.com/jayantasamaddar91',
   },
   {
     name: 'Instagram',
@@ -23,12 +23,12 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: <FaLinkedin />,
-    link: 'https://www.instagram.com/jayantasamaddar',
+    link: 'https://www.linkedin.com/in/jayantasamaddar',
   },
   {
     name: 'Github',
     icon: <FaGithub />,
-    link: 'https://www.instagram.com/jayantasamaddar',
+    link: 'https://www.github.com/jayantasamaddar',
   },
   {
     name: 'Dribbble',
@@ -38,7 +38,7 @@ const socialLinks = [
   {
     name: 'Email',
     icon: <MdEmail />,
-    link: 'mailto:jay.s@kollablifestyle.com',
+    link: 'mailto:jayanta@zenius.one',
   },
 ];
 
@@ -58,6 +58,7 @@ const SocialIcons = ({ className }) => {
             name={name}
             icon={icon}
             to={link}
+            external
           />
         ))}
     </NavBar>
