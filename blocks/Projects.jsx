@@ -1,25 +1,25 @@
 import { Card, Button } from '../components';
-import ProjectImg1 from '../assets/wfdesignbuild.png';
-import ProjectImg2 from '../assets/awg2020.png';
-import ProjectImg3 from '../assets/chronicled.png';
+import Portfolio from '../assets/portfolio.png';
+import UrsaUI from '../assets/ursa-ui.png';
+import Zenius from '../assets/zenius.png';
 
 const projects = [
   {
     title: 'Portfolio Website',
-    image: ProjectImg1,
-    code: 'https://www.github.com/jayantasamaddar',
+    image: Portfolio,
+    code: 'https://www.github.com/jayantasamaddar/portfolio',
     blog: '/blog/projects/portfolio-website',
   },
   {
-    title: 'UI Kit',
-    image: ProjectImg2,
-    code: 'https://www.github.com/jayantasamaddar',
+    title: 'UI Kit Monorepo',
+    image: UrsaUI,
+    code: 'https://github.com/jayantasamaddar/ursa',
     blog: '/blog/projects/ui-kit',
   },
   {
-    title: 'Authentication System',
-    image: ProjectImg3,
-    code: 'https://www.github.com/jayantasamaddar',
+    title: 'Omni-Channel Shipping Solution',
+    image: Zenius,
+    code: 'https://github.com/jayantasamaddar/zenius-omni--frontend',
     blog: '/blog/projects/ui-kit',
   },
 ];
@@ -34,7 +34,7 @@ const Projects = () => {
           Want to see more? Email me.
         </p>
       </div>
-      {/* <div className="flex-col md:flex md:flex-row gap-4 p-10"></div> */}
+
       <div className="flex flex-wrap md:flex-nowrap gap-4 p-10">
         {projects.map(({ title, image, code, blog }, indx) => (
           <Card
@@ -43,8 +43,8 @@ const Projects = () => {
             image={image}
             title={title}
             buttons={[
-              <Button title="View Code" to={code || '#'} />,
-              <Button title="Read Blog" to={blog || '#'} />,
+              <Button title="View Code" to={code || '#'} key={indx} external />,
+              <Button title="Read Blog" to={blog || '#'} key={indx} />,
             ]}
           />
         ))}

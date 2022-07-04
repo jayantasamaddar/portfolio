@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react';
 import Image from 'next/image';
-import { Button } from './';
 
 const Card = ({ className, image, buttons, title }) => {
   const [hoverState, setHoverState] = useState(false);

@@ -1,12 +1,15 @@
 import React from 'react';
-import { SocialIcons } from './';
+import { Logo, SocialIcons } from './';
 import { SiNextdotjs } from 'react-icons/si';
+import LogoWhite from '../assets/logo-white.png';
 
 const Footer = () => {
   return (
     <footer className="footer mt-auto w-full bg-[#7510F7] text-white p-10">
       <div className="flex flex-col justify-center items-center gap-8">
-        <div className="logo flex justify-center items-center">Logo</div>
+        <div className="logo flex justify-center items-center">
+          <Logo src={LogoWhite} />
+        </div>
         <div className="quote flex justify-center items-center">
           "Artist of Life"
         </div>

@@ -11,15 +11,17 @@ import {
   SiFastify,
   SiMongodb,
   SiFirebase,
-  SiNeo4J,
+  SiAmazonaws,
   SiPostgresql,
   SiPrisma,
   SiRedux,
   SiStrapi,
   SiRedis,
+  SiJest,
   SiCypress,
   SiJavascript,
   SiTypescript,
+  SiRollupdotjs,
   SiWebpack,
   SiVite,
   SiVisualstudiocode,
@@ -52,12 +54,14 @@ const tools = [
   { title: 'VS Code', icon: <SiVisualstudiocode /> },
   { title: 'Firebase', icon: <SiFirebase /> },
   { title: 'Redis', icon: <SiRedis /> },
-  { title: 'Neo4j', icon: <SiNeo4J /> },
+  { title: 'Amazon Web Services', icon: <SiAmazonaws /> },
   { title: 'PostgreSQL', icon: <SiPostgresql /> },
   { title: 'Prisma', icon: <SiPrisma /> },
   { title: 'Strapi', icon: <SiStrapi /> },
+  { title: 'Jest', icon: <SiJest /> },
   { title: 'Cypress', icon: <SiCypress /> },
   { title: 'Webpack', icon: <SiWebpack /> },
+  { title: 'Rollup', icon: <SiRollupdotjs /> },
   { title: 'Vite', icon: <SiVite /> },
   { title: 'Git', icon: <FaGit /> },
   { title: 'Figma', icon: <FaFigma /> },
@@ -86,7 +90,7 @@ const Skills = () => {
           <h5 className="py-8">Tools I have worked with:</h5>
           <ul className="flex flex-wrap justify-center items-center gap-4">
             {tools
-              .filter((tool) =>
+              .filter(tool =>
                 [
                   'HTML5',
                   'CSS3',
@@ -98,15 +102,16 @@ const Skills = () => {
                   'Fastify',
                   'React',
                   'Nextjs',
+                  'Redux',
                   'GraphQL',
                   'MongoDB',
-                  'Neo4j',
-                  'PostgreSQL',
-                  'Prisma',
-                  'Redis',
+                  'Amazon Web Services',
+                  'Firebase',
+                  // 'Redis',
                   'Strapi',
-                  'Cypress',
+                  'Jest',
                   'Webpack',
+                  'Rollup',
                   'Git',
                 ].includes(tool.title)
               )
@@ -126,7 +131,8 @@ const Skills = () => {
             <li>Mongoose</li>
             <li>React Hook Form</li>
             <li>React Query</li>
-            <li></li>
+            <li>Zod</li>
+            <li>Turborepo</li>
           </ul>
         </Skillset>
 
@@ -146,7 +152,7 @@ const Skills = () => {
           <h5 className="py-8">Tools I have worked with:</h5>
           <ul className="flex flex-wrap justify-center items-center gap-4">
             {tools
-              .filter((tool) =>
+              .filter(tool =>
                 [
                   'Photoshop',
                   'Illustrator',
@@ -184,7 +190,7 @@ const Skills = () => {
           </ul> */}
           <ul className="flex flex-wrap justify-center items-center gap-4">
             {tools
-              .filter((tool) =>
+              .filter(tool =>
                 ['Zoho', 'Asana', 'Notion', 'Trello', 'Mailchimp'].includes(
                   tool.title
                 )

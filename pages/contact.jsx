@@ -1,4 +1,3 @@
-import { useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { Meta, SubmitButton, FormError } from '../components';
@@ -16,7 +15,7 @@ const Contact = () => {
   const notify = (type, message) => {
     return toast[type](message, {
       position: 'top-center',
-      autoClose: 5000,
+      autoClose: 2500,
       hideProgressBar: false,
       closeOnClick: true,
       progress: undefined,
@@ -31,7 +30,7 @@ const Contact = () => {
         notify('success', 'Your message has been submitted.');
       }
     } catch (error) {
-      console.error(error);
+      console.error(error.message);
     }
   };
 
@@ -66,8 +65,11 @@ const Contact = () => {
           >
             <div className="contact_form--group flex flex-wrap gap-8 md:gap-10">
               <div className="contact__form--name flex flex-col gap-2 grow">
-                <label className="contact__label">Name</label>
+                <label className="contact__label" htmlFor="contact_name">
+                  Name
+                </label>
                 <input
+                  id="contact_name"
                   className={`contact__input ${
                     errors?.Name ? 'focus:ring-2 focus:ring-red-500' : ''
                   }`}
@@ -88,8 +90,11 @@ const Contact = () => {
               </div>
 
               <div className="contact__form--email flex flex-col gap-2 grow">
-                <label className="contact__label">Email</label>
+                <label className="contact__label" htmlFor="contact_email">
+                  Email
+                </label>
                 <input
+                  id="contact_email"
                   className={`contact__input ${
                     errors?.Email ? 'focus:ring-2 focus:ring-red-500' : ''
                   }`}
@@ -110,8 +115,11 @@ const Contact = () => {
             </div>
 
             <div className="contact__form--message flex flex-col gap-2">
-              <label className="contact__label">Message</label>
+              <label className="contact__label" htmlFor="contact_message">
+                Message
+              </label>
               <textarea
+                id="contact_message"
                 className={`contact__input h-40 ${
                   errors?.message ? 'focus:ring-2 focus:ring-red-500' : ''
                 }`}

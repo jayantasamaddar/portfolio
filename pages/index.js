@@ -21,7 +21,7 @@ export default function Home() {
               I design and code beautifully simple things, and I love what I do.
             </h3>
             <div className="introduction__hero-image flex justify-center items-center py-8">
-              <Image src={avatar} />
+              <Image src={avatar} alt="Avatar of Jayanta Samaddar" />
             </div>
           </div>
         </section>

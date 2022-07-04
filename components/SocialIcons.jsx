@@ -44,9 +44,13 @@ const socialLinks = [
 
 const SocialIcons = ({ className }) => {
   return (
-    <NavBar className="social-links flex justify-center items-center gap-4">
+    <NavBar
+      className={`social-links flex justify-center items-center gap-4 ${
+        className || ''
+      }`}
+    >
       {socialLinks
-        .filter((icon) => ['LinkedIn', 'Github', 'Email'].includes(icon.name))
+        .filter(icon => ['LinkedIn', 'Github', 'Email'].includes(icon.name))
         .map(({ name, icon, link }, indx) => (
           <NavItem
             key={indx}

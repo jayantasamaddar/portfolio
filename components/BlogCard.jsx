@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,7 +7,6 @@ const BlogCard = ({
   image,
   title,
   published_at,
-  layout,
   align,
   showExcerpt,
   href,
@@ -23,7 +22,9 @@ const BlogCard = ({
       >
         <div className={`post__cover flex justify-${align || 'start'}`}>
           <Image
-            className="w-full rounded-3xl"
+            className={`w-full rounded-3xl ${
+              hoverState ? 'opacity-95' : 'opacity-100'
+            }`}
             src={image || `https://via.placeholder.com/300x180.png`}
             alt={title}
             width={300}

@@ -45,6 +45,7 @@ const NavItem = ({
                   .replace(/\s+/g, '-')
                   .toLowerCase()}`
           }
+          passHref
         >
           <li
             id={id}

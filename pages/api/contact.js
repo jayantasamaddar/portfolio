@@ -19,6 +19,7 @@ export default async (req, res) => {
       to: 'Jayanta Samaddar <jayanta@zenius.one>',
       replyTo: `${name} <${email}>`,
       subject: 'New message from contact form',
+      text: message,
       html: `
       <style>
         p { white-space: pre-wrap }
@@ -33,7 +34,7 @@ export default async (req, res) => {
     });
     console.log('Message sent: %s', emailResponse.messageId);
   } catch (error) {
-    console.log(error);
+    throw new Error(error.message);
   }
   res.status(200).json(req.body);
 };

@@ -1,8 +1,7 @@
-import Image from 'next/image';
 import { getClient } from '../../lib/sanity.server';
 import groq from 'groq';
-import { Meta, NavBar, NavItem, BlogCard } from '../../components';
-import { BlogLayout1, BlogLayout2 } from '../../layouts';
+import { Meta } from '../../components';
+import { BlogLayout1 } from '../../layouts';
 
 const Blog = ({ posts }) => {
   return (

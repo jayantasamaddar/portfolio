@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { NavBar, NavItem } from './';
-import { BurgerMenu } from './';
+import { NavBar, NavItem, BurgerMenu, Logo } from './';
 import useResizeTracker from '../hooks/useResizeTracker';
 
 const Header = () => {
@@ -31,7 +30,7 @@ const Header = () => {
     };
     document.addEventListener('click', handler);
     return () => document.removeEventListener('click', handler);
-  }, []);
+  }, [toggleMenu]);
 
   /* onKeyup Escape Dropdown */
   useEffect(() => {
@@ -54,7 +53,9 @@ const Header = () => {
           onToggle={showMenu}
         />
         <div className="logo flex sm:basis-full md:basis-1/3 lg:basis-1/2 w-full justify-center md:justify-start items-center px-10 py-3">
-          <div className="cursor-pointer px-2">Logo</div>
+          <div className="cursor-pointer px-2 flex justify-center items-center absolute">
+            <Logo />
+          </div>
         </div>
         {windowWidth > 768 && (
           <div className="navbar col-span-5 px-4">

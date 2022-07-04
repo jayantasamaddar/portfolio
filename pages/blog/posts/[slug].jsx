@@ -31,7 +31,12 @@ const PostComponents = {
     ),
     image: ({ value }) => {
       return (
-        <img
+        // <img
+        //   src={urlFor(value).width(600).url()}
+        //   alt={value.alt || ''}
+        //   className="post__image"
+        // />
+        <Image
           src={urlFor(value).width(600).url()}
           alt={value.alt || ''}
           className="post__image"
@@ -133,9 +138,10 @@ export async function getStaticProps({ params, preview = false }) {
 export async function getStaticPaths() {
   const client = getClient();
   const posts = await client.fetch(groq`*[_type == "post"]{ slug }`);
-  const paths = posts.map(post => ({
+  const paths = posts.map((post, indx) => ({
     params: {
       slug: post.slug.current,
+      key: indx,
     },
   }));
   return {
