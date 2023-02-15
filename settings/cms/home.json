@@ -1,0 +1,28 @@
+{
+  "heading": "Creative Director and Frontend/Fullstack Engineer",
+  "subheading": "I take great pleasure in building aesthetically pleasing yet functional products.",
+  "about": {
+    "heading": "Hi, I’m Jayanta. Nice to meet you.",
+    "text": "I started my journey 6 years ago as the Founder and Creative Director of Kollab - a streetwear brand. The love for building aesthetically pleasing products led me to the digital world. Today, I'm a Certified AWS Developer Associate, Solutions Architect Associate and a Meta Certified Front-End Developer."
+  },
+  "certifications": [
+    {
+      "id": "aws-developer-associate",
+      "title": "AWS Certified Developer Associate",
+      "url": "https://www.credly.com/badges/8999b6cb-b77b-44e1-bcc7-c6f99c4c4c26",
+      "image": "https://ik.imagekit.io/zenius/Personal/Certifications/aws-certified-developer-associate_OUFZSFltnN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1676423302002"
+    },
+    {
+      "id": "aws-solutions-architect-associate",
+      "title": "AWS Certified Solutions Architect Associate",
+      "url": "https://www.credly.com/badges/a539831a-e8ba-4e03-8401-d5c00dec2333",
+      "image": "https://ik.imagekit.io/zenius/Personal/Certifications/aws-certified-solutions-architect-associate_X_Q9SIbt5Y.png?ik-sdk-version=javascript-1.4.3&updatedAt=1676423301940"
+    },
+    {
+      "id": "meta-front-end-developer",
+      "title": "Meta Certified Front-End Developer",
+      "url": "https://www.credly.com/badges/0ba9adff-0b46-423b-b7ec-edad22cb3875",
+      "image": "https://ik.imagekit.io/zenius/Personal/Certifications/meta-front-end-developer-certificate_HGgQzJRFU.png?ik-sdk-version=javascript-1.4.3&updatedAt=1676423301898"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { Meta, Embed } from '../../../components';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '../../../lib/sanity';
 import { getClient } from '../../../lib/sanity.server';
+import { Fragment } from 'react';
 
 const PostComponents = {
   list: {
@@ -86,11 +87,9 @@ const Post = ({ post }) => {
               </p>
               <p className="post___categories text-sm md:text-base">
                 {categories.map(category => (
-                  <>
-                    {category && (
-                      <span key={category.id}>{category?.name ?? ''}</span>
-                    )}
-                  </>
+                  <Fragment key={category.id}>
+                    {category && <span>{category?.name ?? ''}</span>}
+                  </Fragment>
                 ))}
               </p>
             </div>

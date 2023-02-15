@@ -1,28 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/nexa-bold');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
 
 @layer base {
   html,
   body,
   :root,
   div#__next {
-    @apply h-full w-full m-0 p-0;
+    @apply h-full w-full m-0 p-0 scroll-smooth;
+  }
+  body {
+    @apply font-source-sans;
   }
   h1 {
-    @apply text-3xl font-bold text-gray-800;
+    @apply text-3xl font-bold text-gray-800 font-nexa-bold;
   }
   h2 {
-    @apply text-2xl font-bold text-gray-800 pt-10;
+    @apply text-2xl font-bold text-gray-800 font-nexa-bold;
   }
   h3 {
-    @apply text-xl font-bold text-gray-800 pt-10;
+    @apply text-xl font-bold text-gray-800 font-nexa-bold;
   }
   h4 {
-    @apply text-lg font-bold text-gray-800;
+    @apply text-lg font-bold text-gray-800 font-nexa-bold;
   }
   h5 {
-    @apply text-base font-bold text-gray-800 pt-10;
+    @apply text-base font-bold text-gray-800 font-nexa-bold;
   }
   code {
     @apply bg-slate-200 px-2 rounded-sm;
@@ -37,7 +42,10 @@
     @apply list-square;
   }
   p a {
-    @apply text-[#7510F7] font-bold;
+    @apply text-theme-accent font-bold transition-colors;
+  }
+  p a:hover {
+    @apply text-theme-accent-2;
   }
   input,
   textarea {
@@ -45,6 +53,24 @@
   }
   label {
     @apply text-slate-500;
+  }
+  svg {
+    @apply pointer-events-none;
+  }
+  header[data-scroll='scrollDown'] {
+    @apply translate-y-[-60px];
+  }
+  header[data-scroll='scrollUp'] {
+    @apply translate-y-0;
+  }
+  #JS-HeaderMenu.open > ul.JS-NavigationMenuList li {
+    @apply opacity-0;
+  }
+  ul.JS-NavigationMenuList li a {
+    @apply py-4 pr-4;
+  }
+  #JS-HeaderMenu.open {
+    @apply animate-slide-in-left;
   }
 }
 
@@ -68,20 +94,3 @@
     );
   }
 }
-
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-} */

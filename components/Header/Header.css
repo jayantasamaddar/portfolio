@@ -1,0 +1,102 @@
+header {
+  grid-column: 1 / span 12;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  /* height: var(--min-height-header); */
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  /* background-color: gray; */
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow-1);
+  z-index: 1000;
+  transition: 0.3s ease-in-out transform;
+}
+
+header[data-scroll='scrollDown'] {
+  transform: translateY(-60px);
+}
+
+header[data-scroll='scrollUp'] {
+  transform: translateY(0);
+}
+
+.logo.JS-HeaderLogo {
+  margin-left: 12%;
+}
+
+.JS-HeaderLogo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+nav .JS-NavigationMenuList,
+nav .JS-IconsList {
+  display: flex;
+  gap: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 40px;
+}
+
+ul.JS-NavigationMenuList li a {
+  padding: 1rem 1rem 1rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #JS-HeaderMenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: var(--min-height-header); */
+    top: 60px;
+    width: 50%;
+    max-height: 100vh;
+    transform: translateX(-30%);
+    /* transition: 0.3s ease-in-out transform; */
+  }
+
+  #JS-HeaderMenu.open {
+    animation: slideIn 0.2s ease-in-out forwards;
+  }
+
+  ul.JS-NavigationMenuList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    /* background-color: var(--color-primary-2); */
+    background-color: #7510f7;
+    width: 100%;
+    /* height: calc(100vh - var(--min-height-header)); */
+    height: 100vh;
+  }
+
+  #JS-HeaderMenu.open > ul.JS-NavigationMenuList li {
+    opacity: 0;
+  }
+
+  ul.JS-NavigationMenuList li {
+    border-bottom: 1px solid;
+    padding: 1rem 0;
+    animation: fadeIn 0.2s ease-in-out forwards 0.2s;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 938px) {
+  .JS-Logo.JS-HeaderLogo {
+    margin-left: 4%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}

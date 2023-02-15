@@ -5,17 +5,20 @@ import LogoWhite from '../assets/logo-white.png';
 
 const Footer = () => {
   return (
-    <footer className="footer mt-auto w-full bg-[#7510F7] text-white p-10">
+    <footer
+      role="region"
+      className="footer mt-auto w-full bg-theme-primary text-gray-500 p-10"
+    >
       <div className="flex flex-col justify-center items-center gap-8">
-        <div className="logo flex justify-center items-center">
+        <section className="logo flex justify-center items-center">
           <Logo src={LogoWhite} />
-        </div>
+        </section>
         <div className="quote flex justify-center items-center">
           "Artist of Life"
         </div>
         <SocialIcons />
         <div className="copyright flex justify-center items-center">
-          © 2022 Jayanta Samaddar
+          © {new Date().getYear() + 1900} Jayanta Samaddar
         </div>
         <div className="next-icon flex justify-center items-center">
           <p className="flex gap-2">

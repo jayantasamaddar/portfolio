@@ -54,7 +54,7 @@ const SocialIcons = ({ className }) => {
         .map(({ name, icon, link }, indx) => (
           <NavItem
             key={indx}
-            className="text-[24px] p-3 rounded-full border border-white hover:bg-white hover:text-[#7510F7]"
+            className="text-[24px] p-3 rounded-full border border-gray-500 hover:bg-gray-500 hover:text-theme-primary hover:transition-colors hover:duration-300"
             name={name}
             icon={icon}
             to={link}

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { Meta } from '../components';
+import data from '../settings/cms/home';
 import { Skills, Projects } from '../blocks';
-import avatar from '../assets/avatar.svg';
+import jayanta from '../assets/jayantasamaddar.jpg';
 
 export default function Home() {
   return (
@@ -11,40 +12,58 @@ export default function Home() {
         description="Jayanta Samaddar's developer portfolio website."
         keywords="full stack developer, web developer, react, nextjs, mongodb, expressjs"
       />
-      <div className="main-content flex-col">
-        <section className="introduction p-16">
-          <div className="introduction__content flex flex-col gap-4">
-            <h1 className="introduction__headline flex justify-center items-center">
-              Creative Director and Frontend/Fullstack Engineer
+      <div className="main-content flex-col bg-black">
+        <section className="JS-Introduction p-16">
+          <div className="JS-IntroductionContent flex flex-col gap-4">
+            <h1 className="JS-IntroductionHeadline text-gray-200 flex justify-center items-center text-center md:text-left">
+              {data.heading}
             </h1>
-            <h3 className="introduction__byline flex justify-center items-center">
-              I take great pleasure in building aesthetically pleasing yet
-              functional products.
-            </h3>
-            <div className="introduction__hero-image flex justify-center items-center py-8">
-              <Image src={avatar} alt="Avatar of Jayanta Samaddar" />
+            <h2 className="JS-IntroductionByline text-gray-500 flex justify-center items-center text-center text-base font-semibold md:text-left">
+              {data.subheading}
+            </h2>
+            <div className="JS-IntroductionHeroImageContainer flex justify-center items-center py-8">
+              <Image
+                className="object-cover h-full rounded-full"
+                src={jayanta}
+                alt="Photo of Jayanta Samaddar"
+                width={300}
+                height={300}
+              />
             </div>
           </div>
         </section>
 
-        <section className="about py-28 lg:py-48 bg-[#7510F7]">
-          <div className="about__content flex flex-col gap-6 text-white">
-            <h2 className="about__headline flex justify-center items-center text-white px-10 md:px-20">
-              Hi, I’m Jayanta. Nice to meet you.
+        <section
+          id="about"
+          className="JS-About py-28 lg:py-48 bg-theme-primary"
+        >
+          <div className="JS-AboutContent flex flex-col gap-6 text-gray-500">
+            <h2 className="JS-AboutHeadline flex justify-center items-center text-gray-300 text-center px-10 md:px-20">
+              {data.about.heading}
             </h2>
-            <p className="px-10 md:px-20 lg:px-60">
-              I started my journey 6 years ago as the Founder and Creative
-              Director of Kollab - a streetwear brand. The love for building
-              aesthetically pleasing products led me to the digital world. Fast
-              forward to today's date, I am a Frontend and Fullstack Engineer,
-              who has built functional applications that solved real-world
-              problems of a business. I'm currently working on a few independent
-              projects, including a component library, an
-              ecommerce-backend-as-a-service application. I I'm an extremely
-              fast learner and aim at nothing short of mastery, naturally
-              curious, and perpetually building my repertoire one design problem
-              at a time.
+            <p className="JS-AboutDescription px-10 text-center md:px-20 md:text-left lg:px-60">
+              {data.about.text}
             </p>
+
+            <ul
+              className="JS-Certifications flex gap-6 pt-4 justify-center items-center flex-wrap"
+              role="group"
+            >
+              {data.certifications.map(({ id, title, url, image }) => (
+                <li key={id} className="JS-Certification" role="listitem">
+                  <a href={url} title={title} target="_blank" rel="noreferrer">
+                    <Image
+                      src={image}
+                      alt={title}
+                      objectFit="contain"
+                      width={100}
+                      height={100}
+                      role="presentation"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

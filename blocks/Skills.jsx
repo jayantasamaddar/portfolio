@@ -34,6 +34,7 @@ import {
   SiNotion,
   SiTrello,
   SiMailchimp,
+  SiElectron,
 } from 'react-icons/si';
 import { FaNodeJs, FaFigma, FaGit } from 'react-icons/fa';
 
@@ -58,6 +59,7 @@ const tools = [
   { title: 'PostgreSQL', icon: <SiPostgresql /> },
   { title: 'Prisma', icon: <SiPrisma /> },
   { title: 'Strapi', icon: <SiStrapi /> },
+  { title: 'Electron', icon: <SiElectron /> },
   { title: 'Jest', icon: <SiJest /> },
   { title: 'Cypress', icon: <SiCypress /> },
   { title: 'Webpack', icon: <SiWebpack /> },
@@ -108,7 +110,7 @@ const Skills = () => {
                   'Amazon Web Services',
                   'Firebase',
                   // 'Redis',
-                  'Strapi',
+                  'Electron',
                   'Jest',
                   'Webpack',
                   'Rollup',
@@ -163,7 +165,7 @@ const Skills = () => {
               )
               .map(({ title, icon }, indx) => (
                 <NavItem
-                  className="text-[24px] p-3 rounded-full border border-slate-600 hover:bg-slate-200"
+                  className="text-[24px] p-3 rounded-full border border-slate-600 hover:bg-slate-200 hover:transition-colors hover:duration-300"
                   key={indx}
                   name={title}
                   icon={icon}

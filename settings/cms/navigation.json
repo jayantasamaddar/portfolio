@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Home",
+    "title": "Home",
+    "link": "internal",
+    "url": "/"
+  },
+  {
+    "id": 2,
+    "name": "about",
+    "title": "About",
+    "link": "hash",
+    "url": "/#about"
+  },
+  {
+    "id": 3,
+    "name": "projects",
+    "title": "Projects",
+    "link": "hash",
+    "url": "/#projects"
+  },
+  {
+    "id": 5,
+    "name": "contact",
+    "title": "Contact",
+    "link": "internal",
+    "url": "/contact"
+  }
+]

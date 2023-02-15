@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { Meta, SubmitButton, FormError } from '../components';
+import { Meta, Button, Error } from '../components';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -52,10 +52,10 @@ const Contact = () => {
         draggable
         pauseOnHover
       />
-      <div className="contact__body main-content flex flex-col">
+      <div className="contact__body main-content flex flex-col bg-black">
         <section className="contact__introduction p-10">
-          <h1 className="text-center">
-            Thanks for taking the time to reach out. How can I help you today?
+          <h1 className="text-center text-gray-400">
+            How can I help you today?
           </h1>
         </section>
         <section className="contact__form flex flex-col p-10">
@@ -84,9 +84,7 @@ const Contact = () => {
                     },
                   })}
                 />
-                {errors?.name?.message && (
-                  <FormError>{errors.name.message}</FormError>
-                )}
+                {errors?.name?.message && <Error>{errors.name.message}</Error>}
               </div>
 
               <div className="contact__form--email flex flex-col gap-2 grow">
@@ -109,7 +107,7 @@ const Contact = () => {
                   })}
                 />
                 {errors?.email?.message && (
-                  <FormError>{errors.email.message}</FormError>
+                  <Error>{errors.email.message}</Error>
                 )}
               </div>
             </div>
@@ -137,15 +135,14 @@ const Contact = () => {
                 })}
               />
               {errors?.message?.message && (
-                <FormError>{errors.message.message}</FormError>
+                <Error>{errors.message.message}</Error>
               )}
             </div>
 
             <div className="contact__form--submit flex flex-col gap-2 md:px-20 lg:px-40">
-              <SubmitButton
-                title="Submit"
-                className="contact__submit border-2 py-5"
-              />
+              <Button className="py-5" type="submit" primary>
+                Submit
+              </Button>
             </div>
           </form>
         </section>
