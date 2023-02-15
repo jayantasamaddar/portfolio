@@ -76,8 +76,6 @@ export const Header = () => {
     }
   };
 
-  console.log({ showMenu });
-
   /**********************************************************************************/
   /** Render JSX */
   /**********************************************************************************/
@@ -128,7 +126,7 @@ export const Header = () => {
                   name,
                   role: 'menuitem',
                   className:
-                    'border-b py-4 text-white md:text-black md:py-0 md:border-0 animate-fade-in',
+                    'border-b py-4 font-bold text-gray-400 hover:text-white md:text-black md:hover:text-theme-accent-2 md:py-0 md:border-0 transition-colors animate-fade-in',
                 },
                 <Element title={title} {...linkProps}>
                   {title}

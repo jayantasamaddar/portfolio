@@ -83,10 +83,7 @@ const Skills = () => {
     <section className="skills w-full h-full -mt-16 lg:-mt-28 px-10 md:px-20">
       <div className="skills__container bg-white sm:flex-col md:flex lg:flex-row justify-center items-stretch border border-slate-300 rounded-3xl drop-shadow-md">
         <Skillset className="skills__developer" title="Full Stack Developer">
-          <p>
-            I like to code things from scratch, and enjoy bringing ideas to
-            life.
-          </p>
+          <p>I enjoy bringing tech ideas to life - from concept to product.</p>
           <h5 className="py-4">Focus Areas:</h5>
           <p className="">UI/UX Development, Web, APIs, Apps</p>
           <h5 className="py-8">Tools I have worked with:</h5>

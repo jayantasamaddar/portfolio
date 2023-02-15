@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import { Logo, Heading, SocialMediaWidget } from '../../components';
+import { Logo, Heading, SocialIcons } from '../../components';
 import Link from 'next/link';
 import navigation from '../../settings/cms/navigation.json';
 
@@ -54,7 +54,7 @@ export const Footer = () => {
           Social Media
         </Heading>
         <nav className="JS-Navigation JS-FooterNavigation">
-          <SocialMediaWidget />
+          <SocialIcons />
         </nav>
       </section>
     </footer>

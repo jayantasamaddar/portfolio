@@ -17,4 +17,5 @@ export { default as Link } from './Link';
 export { default as ExternalLink } from './navigation/ExternalLink';
 export { Icon } from './Icon';
 export { Main } from './Main';
+export { Heading } from './Heading';
 export { Button } from './Button';
