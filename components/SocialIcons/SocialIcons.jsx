@@ -7,7 +7,7 @@ import {
   FaDribbble,
 } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { NavBar, NavItem } from '.';
+import { NavBar, NavItem } from '..';
 
 const socialLinks = [
   {
@@ -42,7 +42,7 @@ const socialLinks = [
   },
 ];
 
-const SocialIcons = ({ className }) => {
+export const SocialIcons = ({ className }) => {
   return (
     <NavBar
       className={`social-links flex justify-center items-center gap-4 ${
@@ -54,7 +54,7 @@ const SocialIcons = ({ className }) => {
         .map(({ name, icon, link }, indx) => (
           <NavItem
             key={indx}
-            className="text-[24px] p-3 rounded-full border border-gray-500 hover:bg-gray-500 hover:text-theme-primary hover:transition-colors hover:duration-300"
+            className="text-2xl p-3 rounded-full border border-gray-500 hover:bg-gray-500 hover:text-theme-primary hover:transition-colors hover:duration-300"
             name={name}
             icon={icon}
             to={link}
@@ -64,5 +64,3 @@ const SocialIcons = ({ className }) => {
     </NavBar>
   );
 };
-
-export default SocialIcons;

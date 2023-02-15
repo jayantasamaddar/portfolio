@@ -1,7 +1,7 @@
-import { Card, Link } from '../components';
-import projects from '../settings/cms/projects';
+import { Card, Link } from '..';
+import projects from '../../settings/cms/projects';
 
-const Projects = () => {
+export const Projects = () => {
   return (
     <section className="my-projects py-20">
       <div className="flex flex-col justify-center items-center gap-6 px-10 lg:px-20">
@@ -29,5 +29,3 @@ const Projects = () => {
     </section>
   );
 };
-
-export default Projects;

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "full-stack-developer",
+    "title": "Full Stack Developer",
+    "description": "I enjoy bringing tech ideas to life - from concept to product.",
+    "focus": "UI/UX Development, Web, APIs, Apps",
+    "tools": [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+      "Nodejs",
+      "Express",
+      "Fastify",
+      "React",
+      "Nextjs",
+      "Redux",
+      "GraphQL",
+      "MongoDB",
+      "Amazon Web Services",
+      "Redis",
+      "Electron",
+      "Jest",
+      "Webpack",
+      "Rollup",
+      "Git"
+    ],
+    "others": [
+      "Koa",
+      "Mongoose",
+      "React Query",
+      "React Hook Form / Formik",
+      "Zod / Yup",
+      "Turborepo",
+      "Solutions Architecture"
+    ]
+  },
+  {
+    "id": "creative-director",
+    "title": "Creative Director",
+    "description": "I started my professional career as a Creative Director in fashion and simultaneously as a UI/UX Designer for the fashion brand.",
+    "focus": "UI/UX Design, Merchandising, Creative Solutions involving Business and Tech",
+    "tools": ["Photoshop", "Illustrator", "InDesign", "Shopify", "Figma"],
+    "others": ["Flow Charts"]
+  },
+  {
+    "id": "other-skills",
+    "title": "Other Skills",
+    "description": "I have founded and worked at a startup for over 5 years.",
+    "focus": "Business Development, ERP Software",
+    "tools": ["Zoho", "Asana", "Notion", "Trello", "Mailchimp"]
+  }
+]

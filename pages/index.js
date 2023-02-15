@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { Meta } from '../components';
+import { Meta, Skills, Projects } from '../components';
 import data from '../settings/cms/home';
-import { Skills, Projects } from '../blocks';
 import jayanta from '../assets/jayantasamaddar.jpg';
 
 export default function Home() {
@@ -46,7 +45,7 @@ export default function Home() {
             </p>
 
             <ul
-              className="JS-Certifications flex gap-6 pt-4 justify-center items-center flex-wrap"
+              className="JS-Certifications flex gap pt-4 px-10 justify-center items-center flex-wrap md:gap-6"
               role="group"
             >
               {data.certifications.map(({ id, title, url, image }) => (

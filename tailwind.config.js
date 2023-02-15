@@ -1,8 +1,9 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './blocks/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -13,7 +14,7 @@ module.exports = {
           accent: '#240090',
           'accent-2': '#3500D3',
           secondary: '#282828',
-          button: '#7510F7',
+          tertiary: '#7510F7',
         },
       },
       fontFamily: {
@@ -55,5 +56,9 @@ module.exports = {
       'upper-roman': 'upper-roman',
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant('middle', '&:not(:first-child):not(:last-child)');
+    }),
+  ],
 };

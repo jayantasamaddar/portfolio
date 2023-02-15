@@ -69,9 +69,6 @@
   ul.JS-NavigationMenuList li a {
     @apply py-4 pr-4;
   }
-  /* #JS-HeaderMenu.open ul.JS-NavigationMenuList li a {
-    @apply text-white;
-  } */
   #JS-HeaderMenu.open {
     @apply animate-slide-in-left;
   }
